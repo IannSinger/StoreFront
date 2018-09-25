@@ -1,0 +1,16 @@
+<h1>Here's all our stuff you can buy!</h1>
+
+<table>
+  <tr>
+    <th><strong>Item</strong></th>
+    <th><strong>Price</strong></th>
+  </tr>
+
+  <% @items.each do |item| %>
+    <tr>
+      <td><%= item.name %></td>
+      <td><%= item.price %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to "New item", new_item_path %>
